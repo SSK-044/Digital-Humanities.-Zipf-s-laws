@@ -6,12 +6,35 @@
     <title>Zipf’s law practice</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <style>
-        body { background-color: #fcfaeb; font-family: 'Lora', serif; }
-        .hero { background: linear-gradient(135deg, #4a4f30 0%, #767d4c 100%); color: white; padding: 30px 20px; text-align: center; border-radius: 0 0 0px 0px; }
-        .card { border: none; border-radius: 0px; transition: transform 0.2s; }
-        .card:hover { transform: translateY(-5px); }
-        .btn-custom { padding: 10px 20px; color: #4a4f30; font-weight: bold; font-family: 'Arsenal', sans-serif; border-radius: 3px; }
-    </style>
+    body { background-color: #faf8f2; font-family: 'Arsenal', sans-serif; }
+    .hero { background: linear-gradient(135deg, #4a4f30 0%, #767d4c 100%); color: white; padding: 40px 20px; text-align: center; border-radius: 0; }
+    
+    .card { 
+        background-color: transparent; /* Робить фон блоку таким самим, як у сторінки */
+        border: 2px solid #4a4f30; /* Ваше зелене обведення */
+        border-radius: 4px; /* Легке заокруглення кутів */
+        transition: transform 0.2s; 
+        margin-top: 50px; /* Опускає білі блоки нижче від зеленої шапки */
+    }
+    .card:hover { transform: translateY(-5px); }
+    
+    /* Робимо текст всередині блоків примусово чорним */
+    .card h3, .card p { color: #000000 !important; }
+    
+    .btn-custom { 
+        background-color: #4a4f30; /* Зелений колір кнопки */
+        color: #ffffff !important; /* Білий текст */
+        border: none;
+        padding: 10px 25px; 
+        font-weight: bold; 
+        font-family: 'Arsenal', sans-serif; 
+        border-radius: 3px; 
+        transition: 0.2s;
+    }
+    .btn-custom:hover { 
+        background-color: #767d4c; /* Кнопка трохи світлішає при наведенні мишки */
+    }
+</style>
 </head>
 <body>
 
@@ -23,23 +46,23 @@
 <div class="container">
     <div class="row justify-content-center g-4">
         
-        <!-- Картка старого тексту -->
-        <div class="col-md-5">
-            <div class="card h-100 p-4 text-center">
-                <h3 class="fw-bold text-secondary mb-3">1950's text</h3>
-                <p class="text-muted mb-4">"Garden of Gethsemane" Ivan Bahrianyi</p>
-                <a href="old_text.html" class="btn btn-outline-secondary btn-custom mt-auto">Open</a>
-            </div>
-        </div>
+       <!-- Картка старого тексту -->
+<div class="col-md-5">
+    <div class="card h-100 p-4 text-center">
+        <h3 class="fw-bold mb-3">1950's text</h3>
+        <p class="mb-4">"Garden of Gethsemane" Ivan Bahrianyi</p>
+        <a href="old_text.html" class="btn btn-custom mt-auto">Open</a>
+    </div>
+</div>
 
-        <!-- Картка сучасного тексту -->
-        <div class="col-md-5">
-            <div class="card h-100 p-4 text-center">
-                <h3 class="fw-bold text-primary mb-3">2010's text</h3>
-                <p class="text-muted mb-4">"Voroshilovgrad" Serhiy Zhadan</p>
-                <a href="modern_text.html" class="btn btn-primary btn-custom mt-auto">Open</a>
-            </div>
-        </div>
+<!-- Картка сучасного тексту -->
+<div class="col-md-5">
+    <div class="card h-100 p-4 text-center">
+        <h3 class="fw-bold mb-3">2010's text</h3>
+        <p class="mb-4">"Voroshilovgrad" Serhiy Zhadan</p>
+        <a href="modern_text.html" class="btn btn-custom mt-auto">Open</a>
+    </div>
+</div>
 
     </div>
     
